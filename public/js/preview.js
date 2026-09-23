@@ -9,36 +9,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.certificate-link').forEach((link) => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
-            certificateModalImage.src = link.href;
-            certificateModalImage.alt = link.querySelector('img')?.alt || 'Preview sertifikat';
-            certificateModal.classList.add('is-open');
-            certificateModal.setAttribute('aria-hidden', 'false');
             
-            document.body.style.overflow = 'hidden';
+            const imageSrc = link.dataset.img || link.getAttribute('href');
+            const imgElement = link.querySelector('img');
+            
+            if (imageSrc && certificateModalImage) {
+                certificateModalImage.src = imageSrc;
+                certificateModalImage.alt = imgElement ? imgElement.alt : 'Preview sertifikat';
+                
+                certificateModal.classList.add('is-open');
+                certificateModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
         });
     });
 
     const closeCertificateModal = () => {
-        certificateModal.classList.remove('is-open');
-        certificateModal.setAttribute('aria-hidden', 'true');
-        certificateModalImage.src = '';
-        
-        document.body.style.overflow = '';
+        if (certificateModal) {
+            certificateModal.classList.remove('is-open');
+            certificateModal.setAttribute('aria-hidden', 'true');
+            if (certificateModalImage) certificateModalImage.src = '';
+            document.body.style.overflow = '';
+        }
     };
 
     const closeBtn = document.querySelector('.certificate-modal-close');
-    if (closeBtn) {
-        closeBtn.addEventListener('click', closeCertificateModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeCertificateModal);
+
+    if (certificateModal) {
+        certificateModal.addEventListener('click', (event) => {
+            if (event.target === certificateModal) closeCertificateModal();
+        });
     }
 
-    certificateModal.addEventListener('click', (event) => {
-        if (event.target === certificateModal) {
-            closeCertificateModal();
-        }
-    });
-
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && certificateModal.classList.contains('is-open')) {
+        if (event.key === 'Escape' && certificateModal?.classList.contains('is-open')) {
             closeCertificateModal();
         }
     });
