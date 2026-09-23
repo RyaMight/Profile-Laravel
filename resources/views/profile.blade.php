@@ -24,7 +24,7 @@
                 </div>
                 <div class="Home-content">
                     <h1>Hi, It's <span>Rayasa</span></h1>
-                    <h2 class="typing-text">I'm a <span>DevSecOps</span></h3>
+                    <h2 class="typing-text">I'm a <span>DevSecOps</span></h2>
                     <p>Software Engineering student at SMKN 1 Bantul</p>
                     <div class="social-icon">
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -51,11 +51,37 @@
                 <h2 class="Certification-title">Certifications</h2>
                 <div class="Certification-grid">
                     <figure>
-                        <img src="{{ asset('images/CBC.png') }}" alt="Sertifikat CBD">
+                        <a href="{{ asset('images/CBC.png') }}" class="certificate-link" aria-label="Lihat sertifikat CBC">
+                            <img src="{{ asset('images/CBC.png') }}" alt="Sertifikat CBC">
+                        </a>
                         <figcaption>Cyber Breaker Development Participation</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="{{ asset('images/LKS CERTIF.jpg') }}" class="certificate-link" aria-label="Lihat sertifikat LKS">
+                            <img src="{{ asset('images/LKS CERTIF.jpg') }}" alt="Sertifikat LKS">
+                        </a>
+                        <figcaption>Kompetisi LKS</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="{{ asset('images/CSharp.png') }}" class="certificate-link" aria-label="Lihat sertifikat C# Basic">
+                            <img src="{{ asset('images/CSharp.png') }}" alt="Sertifikat C# Basic">
+                        </a>
+                        <figcaption>C# Basic From Microsoft</figcaption>
+                    </figure>
+                    <figure>
+                        <a href="{{ asset('images/BasicAI.png') }}" class="certificate-link" aria-label="Lihat sertifikat Basic AI">
+                            <img src="{{ asset('images/BasicAI.png') }}" alt="Sertifikat Basic AI">
+                        </a>
+                        <figcaption>Basic AI Concepts From Dicoding</figcaption>
                     </figure>
                 </div>
             </section>
 
+            <div class="certificate-modal" id="certificate-modal" aria-hidden="true">
+                <button class="certificate-modal-close" type="button" aria-label="Close Preview">&times;</button>
+                <img id="certificate-modal-image" src="" alt="Preview sertifikat">
+            </div>
+
+            <script src="{{ asset('js/preview.js') }}"></script>
     </body>
     </html>
