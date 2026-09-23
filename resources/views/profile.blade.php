@@ -78,8 +78,8 @@
             </section>
 
             <div class="certificate-modal" id="certificate-modal" aria-hidden="true">
-                <button class="certificate-modal-close" type="button" aria-label="Close Preview">&times;</button>
-                <img id="certificate-modal-image" src="" alt="Preview sertifikat">
+                 <button class="certificate-modal-close" type="button" aria-label="Close Preview">&times;</button>
+                 <img id="certificate-modal-image" src="" alt="Preview sertifikat">
             </div>
 
             <script src="{{ asset('js/preview.js') }}"></script>

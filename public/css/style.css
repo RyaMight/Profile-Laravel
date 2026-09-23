@@ -290,9 +290,6 @@ header {
     z-index: 10000;
 }
 
-/* ==========================================
-   RESPONSIF (LAYOUT MOBILE & TABLET)
-   ========================================== */
 @media (max-width: 992px) {
     .about-certif-container {
         flex-direction: column;
