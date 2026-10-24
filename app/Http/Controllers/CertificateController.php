@@ -35,7 +35,7 @@ class CertificateController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('certificates.index')->with('success', 'Sertifikat berhasil ditambahkan!');
+        return redirect()->route('admin.certificates.index')->with('success', 'Sertifikat berhasil ditambahkan!');
     }
 
     public function edit(Certificate $certificate)
@@ -65,7 +65,7 @@ class CertificateController extends Controller
 
         $certificate->update($data);
 
-        return redirect()->route('certificates.index')->with('success', 'Sertifikat berhasil diperbarui!');
+        return redirect()->route('admin.certificates.index')->with('success', 'Sertifikat berhasil diperbarui!');
     }
 
     public function destroy(Certificate $certificate)
