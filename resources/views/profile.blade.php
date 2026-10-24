@@ -77,7 +77,7 @@
             </div>
             <div class="Tech-Stack">
                 <h2>Tech Stack</h2>
-                <p>Berikut adalah teknologi dan tools yang saya gunakan untuk pengembangan web maupun keamanan sistem:</p>
+                <p>Here are the technologies and tools I use for web development and system security:</p>
                 <div class="tech-grid">
                     <div class="tech-item"><i class="fab fa-php"></i><span>PHP</span></div>
                     <div class="tech-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
