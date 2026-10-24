@@ -1091,9 +1091,59 @@ html {
     .terminal-body {
         font-size: 1.2rem;
     }
+
+    .ff-label {
+        min-width: 8rem;
+    }
+
+    .admin-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
+    .admin-card img {
+        width: 100%;
+        height: auto;
+        max-height: 14rem;
+    }
+
+    .admin-card-info p {
+        white-space: normal;
+    }
+
+    .admin-card-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 6%;
+    }
+
+    .home {
+        padding: 8rem 6% 3rem;
+    }
+
+    .Profile img {
+        width: 20rem;
+    }
+
+    .Home-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 26rem;
+    }
+
     .about-certif-container {
         padding: 2rem 6%;
     }
@@ -1112,5 +1162,83 @@ html {
 
     .Certification-grid {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .tech-item i {
+        font-size: 2.2rem;
+    }
+
+    .tech-item span {
+        font-size: 1.1rem;
+    }
+
+    .Projects,
+    .Contact {
+        padding: 3rem 6%;
+    }
+
+    .Contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .admin-panel {
+        padding: 10rem 6% 3rem;
+    }
+
+    .Login-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .ff-layout {
+        padding: 1.2rem 1.4rem;
+        gap: 1.2rem;
+    }
+
+    .ff-info {
+        min-width: 0;
+    }
+
+    .ff-row {
+        gap: 0.5rem;
+    }
+
+    .ff-label {
+        min-width: 6.5rem;
+        font-size: 1.2rem;
+    }
+
+    .ff-value {
+        font-size: 1.2rem;
+        word-break: break-word;
+    }
+
+    .ff-user {
+        font-size: 1.4rem;
+    }
+
+    .ff-colorbar span {
+        width: 1.6rem;
+        height: 0.8rem;
+    }
+
+    .admin-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .admin-toolbar .btn-submit {
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 2rem 6%;
+        justify-content: center;
+        text-align: center;
     }
 }
