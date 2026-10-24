@@ -501,6 +501,14 @@ header {
     margin: 0;
 }
 
+.Certification figure {
+    text-align: center;
+}
+
+.Certification figcaption {
+    text-align: center;
+}
+
 .Certification-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1162,6 +1170,14 @@ html {
 
     .Certification-grid {
         grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .Certification figure {
+        text-align: center;
+    }
+
+    .Certification figcaption {
+        text-align: center;
     }
 
     .tech-grid {
