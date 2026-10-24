@@ -1,7 +1,9 @@
 FROM php:8.3-apache
 
-# Install PHP extensions yang dibutuhkan Laravel
-RUN docker-php-ext-install pdo pdo_mysql bcmath
+# Install PHP extensions yang dibutuhkan Laravel + zip untuk composer
+RUN apt-get update && apt-get install -y --no-install-recommends unzip libzip-dev \
+    && docker-php-ext-install zip pdo pdo_mysql bcmath \
+    && rm -rf /var/lib/apt/lists/*
 
 # Enable Apache mod_rewrite untuk Laravel
 RUN a2enmod rewrite
