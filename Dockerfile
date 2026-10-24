@@ -29,8 +29,8 @@ RUN cp /var/www/html/.env.example /var/www/html/.env || true
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Entrypoint: setup Laravel sekali lalu jalankan Apache
-RUN printf '#!/bin/bash\nset -e\nphp artisan key:generate --force || true\nphp artisan migrate --force || true\nphp artisan storage:link || true\nexec apache2-foreground\n' > /usr/local/bin/entrypoint.sh \
+# Entrypoint: setup Laravel sekali lalu jalankan artisan serve
+RUN printf '#!/bin/bash\nset -e\nphp artisan key:generate --force || true\nphp artisan migrate --force || true\nphp artisan storage:link || true\nexec php artisan serve --host=0.0.0.0 --port=80\n' > /usr/local/bin/entrypoint.sh \
     && chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 80
