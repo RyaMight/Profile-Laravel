@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
 
 # Install PHP extensions yang dibutuhkan Laravel
 RUN docker-php-ext-install pdo pdo_mysql bcmath
