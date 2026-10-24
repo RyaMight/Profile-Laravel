@@ -1,7 +1,7 @@
 FROM php:8.3-apache
 
 # Install PHP extensions yang dibutuhkan Laravel + zip untuk composer
-RUN apt-get update && apt-get install -y --no-install-recommends unzip libzip-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends unzip libzip-dev default-mysql-client \
     && docker-php-ext-install zip pdo pdo_mysql bcmath \
     && rm -rf /var/lib/apt/lists/*
 
@@ -20,12 +20,19 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 COPY . /var/www/html
 
 # Install dependencies PHP (production)
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress || composer install --optimize-autoloader --no-interaction --no-progress
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+
+# Gunakan .env.example sebagai .env di container
+RUN cp /var/www/html/.env.example /var/www/html/.env || true
 
 # Set permission storage & cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
+# Entrypoint: setup Laravel sekali lalu jalankan Apache
+RUN printf '#!/bin/bash\nset -e\nphp artisan key:generate --force || true\nphp artisan migrate --force || true\nphp artisan storage:link || true\nexec apache2-foreground\n' > /usr/local/bin/entrypoint.sh \
+    && chmod +x /usr/local/bin/entrypoint.sh
+
 EXPOSE 80
 
-CMD ["apache2-foreground"]
+CMD ["entrypoint.sh"]
