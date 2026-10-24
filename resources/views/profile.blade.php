@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="#home" class="logo">Rayasa</a>
+        <a href="#home" class="logo">ray4sec<span class="logo-cursor">_</span></a>
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>

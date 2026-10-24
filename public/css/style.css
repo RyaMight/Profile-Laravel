@@ -48,6 +48,10 @@ header {
     transition: 0.5s ease;
 }
 
+.logo-cursor {
+    animation: blink 1s step-end infinite;
+}
+
 .navbar {
     display: flex;
     gap: 2rem;
