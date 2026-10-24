@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Certificate;
 
 class ProfileController extends Controller
 {
     public function profile()
     {
-        return view("profile");
+        $certificates = Certificate::latest()->get();
+
+        return view('profile', compact('certificates'));
     }
 }
