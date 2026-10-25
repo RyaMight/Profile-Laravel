@@ -4,11 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\AdminAuthController;
 
-Route::get('/', function () {
-    return redirect('/profile');
-});
-
-Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+Route::get('/', [ProfileController::class, 'profile'])->name('profile');
 
 Route::get('/admin/login', [AdminAuthController::class, 'showLogin'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
