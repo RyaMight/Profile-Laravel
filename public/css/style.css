@@ -351,8 +351,6 @@ header {
     z-index: 0;
     border-radius: 10px;
     margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .btn:before {
@@ -1155,6 +1153,8 @@ html {
     .btn {
         width: 100%;
         max-width: 26rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about-certif-container {
