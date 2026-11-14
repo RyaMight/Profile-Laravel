@@ -88,14 +88,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 6rem;
+    gap: 3rem;
     width: 100%;
     min-height: 60vh;
-    padding: 6rem 9% 4rem;
+    padding: 6rem 6% 4rem;
 }
 
 .Profile img {
-    width: 28rem;
+    width: clamp(18rem, 18vw, 28rem);
     border-radius: 50%;
     border: 4px solid white;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -114,8 +114,8 @@ header {
 .Terminal-card {
     margin-left: auto;
     margin-right: 6rem;
-    width: 74rem;
-    max-width: 60vw;
+    flex: 1 1 auto;
+    max-width: clamp(48rem, 52vw, 74rem);
     min-width: 0;
     background: rgba(8, 12, 10, 0.85);
     border: 1px solid #1e3a2a;
@@ -298,7 +298,7 @@ header {
 .bg-white   { background: #e6edf3; }
 
 .Home-content h1 {
-    font-size: 4rem;
+    font-size: clamp(3rem, 3.2vw, 4rem);
     margin-bottom: 1rem;
 }
 
@@ -1033,6 +1033,28 @@ header {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
+}
+
+@media (min-width: 993px) and (max-width: 1500px) {
+    .home {
+        gap: 2rem;
+    }
+
+    .Profile img {
+        width: clamp(16rem, 14vw, 20rem);
+    }
+
+    .Terminal-card {
+        margin-right: 2rem;
+    }
+
+    .terminal-body {
+        font-size: 1.2rem;
+    }
+
+    .ff-image {
+        width: 14rem;
+    }
 }
 
 @media (max-width: 992px) {

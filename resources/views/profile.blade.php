@@ -46,19 +46,19 @@
                     <img src="{{ asset('images/Lain.jpeg') }}" alt="Lain">
                 </div>
                 <div class="terminal-body ff-info">
-                    <p class="ff-row"><span class="ff-key ff-red">&#9642;</span><span class="ff-label">OS</span><span class="ff-value">Kali GNU/Linux Rolling x86_64</span></p>
-                    <p class="ff-row"><span class="ff-key ff-orange">&#9642;</span><span class="ff-label">Host</span><span class="ff-value">Windows Subsystem for Linux - kali-linux (3.0.1.0)</span></p>
-                    <p class="ff-row"><span class="ff-key ff-yellow">&#9642;</span><span class="ff-label">Kernel</span><span class="ff-value">Linux 6.18.40.1-microsoft-standard-WSL2</span></p>
+                    <p class="ff-row"><span class="ff-key ff-red">&#9642;</span><span class="ff-label">OS</span><span class="ff-value">macOS 26.2 arm64</span></p>
+                    <p class="ff-row"><span class="ff-key ff-orange">&#9642;</span><span class="ff-label">Host</span><span class="ff-value">MacBook Pro (14-inch, Nov 2024)</span></p>
+                    <p class="ff-row"><span class="ff-key ff-yellow">&#9642;</span><span class="ff-label">Kernel</span><span class="ff-value">Darwin 26.2.0</span></p>
                     <p class="ff-row"><span class="ff-key ff-green">&#9642;</span><span class="ff-label">Uptime</span><span class="ff-value">2 mins</span></p>
-                    <p class="ff-row"><span class="ff-key ff-cyan">&#9642;</span><span class="ff-label">Packages</span><span class="ff-value">899 (dpkg)</span></p>
-                    <p class="ff-row"><span class="ff-key ff-blue">&#9642;</span><span class="ff-label">Shell</span><span class="ff-value">bash 5.3.9</span></p>
-                    <p class="ff-row"><span class="ff-key ff-magenta">&#9642;</span><span class="ff-label">WM</span><span class="ff-value">WSLg (Wayland) 1.0.79</span></p>
+                    <p class="ff-row"><span class="ff-key ff-cyan">&#9642;</span><span class="ff-label">Packages</span><span class="ff-value">187 (brew)</span></p>
+                    <p class="ff-row"><span class="ff-key ff-blue">&#9642;</span><span class="ff-label">Shell</span><span class="ff-value">zsh 5.9</span></p>
+                    <p class="ff-row"><span class="ff-key ff-magenta">&#9642;</span><span class="ff-label">WM</span><span class="ff-value">Aqua (Quartz Compositor)</span></p>
                     <p class="ff-spacer"></p>
-                    <p class="ff-row"><span class="ff-key ff-red">&#9642;</span><span class="ff-label">Terminal</span><span class="ff-value">Windows Terminal</span></p>
-                    <p class="ff-row"><span class="ff-key ff-orange">&#9642;</span><span class="ff-label">CPU</span><span class="ff-value">12th Gen Intel(R) Core(TM) i5-12450H (12) @ 2.50 GHz</span></p>
-                    <p class="ff-row"><span class="ff-key ff-yellow">&#9642;</span><span class="ff-label">GPU 1</span><span class="ff-value">NVIDIA GeForce RTX 3050 6GB Laptop GPU @ 2.10 GHz</span></p>
-                    <p class="ff-row"><span class="ff-key ff-green">&#9642;</span><span class="ff-label">GPU 2</span><span class="ff-value">Intel(R) UHD Graphics [Integrated]</span></p>
-                    <p class="ff-row"><span class="ff-key ff-blue">&#9642;</span><span class="ff-label">Swap</span><span class="ff-value">0 B / 2.00 GiB (0%)</span></p>
+                    <p class="ff-row"><span class="ff-key ff-red">&#9642;</span><span class="ff-label">Terminal</span><span class="ff-value">iTerm2</span></p>
+                    <p class="ff-row"><span class="ff-key ff-orange">&#9642;</span><span class="ff-label">CPU</span><span class="ff-value">Apple M4 (10) @ 4.40 GHz</span></p>
+                    <p class="ff-row"><span class="ff-key ff-yellow">&#9642;</span><span class="ff-label">GPU</span><span class="ff-value">Apple M4 (10-core) Integrated</span></p>
+                    <p class="ff-row"><span class="ff-key ff-green">&#9642;</span><span class="ff-label">Memory</span><span class="ff-value">2.1 GiB / 16.0 GiB (13%)</span></p>
+                    <p class="ff-row"><span class="ff-key ff-blue">&#9642;</span><span class="ff-label">Disk (/)</span><span class="ff-value">68.4 GiB / 494.4 GiB (14%)</span></p>
                     <p class="ff-row"><span class="ff-key ff-cyan">&#9642;</span><span class="ff-label">Locale</span><span class="ff-value">en_US.UTF-8</span></p>
                     <p class="ff-spacer"></p>
                     <div class="ff-colorbar">
